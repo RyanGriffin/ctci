@@ -33,8 +33,6 @@ public class question01
 		return true;
 	}
 	
-	// change for github testing 2
-	
 	public static void main(String args[])
 	{
 		String Words[] = {"dawg", "dog", "doggo", "cat123", "cat122", "kitty"};
