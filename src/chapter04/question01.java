@@ -2,17 +2,17 @@ package chapter04;
 import java.util.LinkedList;
 
 public class question01 {	
-	public static Graph createNewGraph(int n)
+	public static Graph createNewGraph()
 	{
-		Graph g = new Graph(n);
-		GNode[] temp = new GNode[n];
+		Graph g = new Graph(6);
+		GNode[] temp = new GNode[6];
 		
-		temp[0] = new GNode(1, 3);
-		temp[1] = new GNode(2, 0);
-		temp[2] = new GNode(3, 0);
-		temp[3] = new GNode(4, 1);
-		temp[4] = new GNode(5, 1);
-		temp[5] = new GNode(6, 0);
+		temp[0] = new GNode(1);
+		temp[1] = new GNode(2);
+		temp[2] = new GNode(3);
+		temp[3] = new GNode(4);
+		temp[4] = new GNode(5);
+		temp[5] = new GNode(6);
 		
 		temp[0].addAdjacaent(temp[1]);
 		temp[0].addAdjacaent(temp[2]);
@@ -56,7 +56,7 @@ public class question01 {
 	}
 
 	public static void main(String[] args) {
-		Graph g = createNewGraph(6); // has to have 6 as input
+		Graph g = createNewGraph();
 		GNode[] nodes = g.getNodes();
 		// GNode start = nodes[3], end = nodes[5];
 		System.out.println(search(g, nodes[0], nodes[5])); // true
