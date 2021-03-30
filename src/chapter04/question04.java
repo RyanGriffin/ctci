@@ -21,10 +21,5 @@ public class question04 { // also includes question 5
 		
 		if(t1.isBalanced() && t1.isBST() && !t2.isBalanced() && !t2.isBST())
 			System.out.println("it works!");
-		
-//		System.out.println("The first tree is balanced: " + t1.isBalanced());
-//		System.out.println("The first tree is a BST: " + t1.isBST());
-//		System.out.println("The second tree is balanced: " + t2.isBalanced());
-//		System.out.println("The second tree is a BST: " + t2.isBST());
 	}
 }
