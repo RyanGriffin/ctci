@@ -43,6 +43,24 @@ public class Tree
 		}
 	}
 	
+	// overload to insert with node
+	public void insertInOrder(Tree n) {
+		if(n.data <= data) // insert on left
+		{
+			if(left == null)
+				setLeft(n);
+			else
+				left.insertInOrder(n);
+		}
+		else // insert on right
+		{
+			if(right == null)
+				setRight(n);
+			else
+				right.insertInOrder(n);
+		}
+	}
+	
 	public int height()
 	{
 		int leftHeight = left != null ? left.height() : 0;
