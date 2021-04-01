@@ -1,5 +1,6 @@
-package chapter04;
 // NODE FOR A BINARY TREE!
+
+package chapter04;
 
 public class Tree
 {
@@ -59,8 +60,7 @@ public class Tree
 		}
 	}
 	
-	public int height()
-	{
+	public int height() {
 		int leftHeight = left != null ? left.height() : 0;
 		int rightHeight = right != null ? right.height() : 0;
 		
@@ -74,6 +74,16 @@ public class Tree
 //		return 1 + Math.max(lHeight, rHeight);
 	}
 	
+	public int depth() {
+		int count = 0;
+		Tree node = this;
+		while(node.parent != null) {
+			count++;
+			node = node.parent;
+		}
+		return count;
+	}
+	
 	public boolean isBalanced() { // question 4
 		if((left == null && right.height() > 1) || (right == null && left.height() > 1)) // accounts for one side of tree being empty (can't call left.height() if left is null)
 			return false;
@@ -81,7 +91,6 @@ public class Tree
 			return false;
 		return true;
 	}
-	
 	
 	public boolean isBST() { // question 5
 		if(left != null && (data < left.data || !left.isBST())) // return false if data on left is larger, or left is not a BST...
@@ -104,8 +113,7 @@ public class Tree
 		return t;
 	}
 	
-	public Tree find(int d) // only finds first instance of node with given value
-	{
+	public Tree find(int d) { // finds first instance of node with given value
 		if(data == d)
 			return this;
 		if(data < d && left != null) // <= not needed
@@ -115,8 +123,7 @@ public class Tree
 		return null;
 	}
 	
-	public static Tree makeTree(int[] arr, int start, int end)
-	{
+	public static Tree makeTree(int[] arr, int start, int end) {
 		if(end < start)
 			return null;
 		
