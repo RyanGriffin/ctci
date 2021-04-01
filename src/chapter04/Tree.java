@@ -4,11 +4,9 @@ package chapter04;
 public class Tree
 {
 	public int data;
-	// public BNode[] children;
 	public Tree left;
 	public Tree right;
 	public Tree parent;
-	public boolean visited = false;
 	
 	public Tree(int value) {
 		data = value;
