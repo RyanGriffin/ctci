@@ -44,11 +44,11 @@ public class question08 {
 		Tree t4 = new Tree(9);
 		Tree t5 = new Tree(14);
 		
-		t.insertInOrder(t1);
-		t.insertInOrder(t2);
-		t.insertInOrder(t3);
-		t.insertInOrder(t4);
-		t.insertInOrder(t5);
+		t.insert(t1);
+		t.insert(t2);
+		t.insert(t3);
+		t.insert(t4);
+		t.insert(t5);
 		
 		// test case 1: same depths, ancestor is root
 		// test case 2: different depths, ancestor is root
