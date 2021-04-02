@@ -25,38 +25,38 @@ public class Tree
 			n.parent = this;
 	}
 	
-	public void insertInOrder(int d) {
+	public void insert(int d) {
 		if(d <= data) // insert on left
 		{
 			if(left == null)
 				setLeft(new Tree(d));
 			else
-				left.insertInOrder(d);
+				left.insert(d);
 		}
 		else // insert on right
 		{
 			if(right == null)
 				setRight(new Tree(d));
 			else
-				right.insertInOrder(d);
+				right.insert(d);
 		}
 	}
 	
 	// overload to insert with node
-	public void insertInOrder(Tree n) {
+	public void insert(Tree n) {
 		if(n.data <= data) // insert on left
 		{
 			if(left == null)
 				setLeft(n);
 			else
-				left.insertInOrder(n);
+				left.insert(n);
 		}
 		else // insert on right
 		{
 			if(right == null)
 				setRight(n);
 			else
-				right.insertInOrder(n);
+				right.insert(n);
 		}
 	}
 	
