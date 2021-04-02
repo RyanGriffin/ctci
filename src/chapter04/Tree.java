@@ -13,6 +13,13 @@ public class Tree
 		data = value;
 	}
 	
+	// overload to create tree from array
+	public Tree(int[] arr) {
+		data = arr[0];
+		for(int i = 1; i < arr.length; i++)
+			insert(arr[i]);
+	}
+	
 	public void setLeft(Tree n) {
 		left = n;
 		if(n != null)
