@@ -19,7 +19,7 @@ public class question03 {
 		Tree t = new Tree(arr[0]);
 		
 		for(int i = 1; i < arr.length; i++)
-			t.insertInOrder(arr[i]);
+			t.insert(arr[i]);
 		
 		ArrayList<LinkedList<Tree>> list = new ArrayList<LinkedList<Tree>>();
 		

@@ -6,7 +6,7 @@ public class question06 { // question 5 is included in question04.java
 		Tree t = new Tree(arr[0]);
 		
 		for(int i = 1; i < arr.length; i++)
-			t.insertInOrder(arr[i]);
+			t.insert(arr[i]);
 		
 		System.out.println(t.findSuccessor().data);
 	}

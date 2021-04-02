@@ -36,7 +36,7 @@ public class question08 {
 		Tree t = new Tree(arr[0]);
 		
 		for(int i = 1; i < arr.length; i++)
-			t.insertInOrder(arr[i]);
+			t.insert(arr[i]);
 		
 		Tree t1 = new Tree(1);
 		Tree t2 = new Tree(3);

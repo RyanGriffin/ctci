@@ -15,8 +15,8 @@ public class question04 { // also includes question 5
 		t2.setLeft(new Tree(8)); // makes t2 not a BST
 		
 		for(int i = 1; i < 7; i++) {
-			t1.insertInOrder(arr1[i]);
-			t2.insertInOrder(arr2[i]);
+			t1.insert(arr1[i]);
+			t2.insert(arr2[i]);
 		}
 		
 		if(t1.isBalanced() && t1.isBST() && !t2.isBalanced() && !t2.isBST())
